@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BlockUI Manager</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+</head>
+<body>
+
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">UIBlock Manager</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container" style="padding-top: 60px;">
+
+    <div class="row">
+      <div class="col-md-12">
+        <button class="btn btn-default" onclick="app.onBlockClicked(event)">BlockUI</button>
+        <button class="btn btn-default" onclick="app.onUnblockClicked(event)">UnblockUI</button>
+        <button class="btn btn-default" onclick="app.onBlockAndUnblockClicked(event)">BlockUI&UnblockUI (B&U)</button>
+        <button class="btn btn-default" onclick="app.onBlockAndUnblockAfter500Clicked(event)">B&U - 500ms</button>
+      </div>
+      <div class="col-md-12">
+        <form class="form-inline">
+          <div class="form-group">
+            <input type="number" class="form-control" id="timesSerial" placeholder="Times" value="10">
+            <input type="number" class="form-control" id="secsSerial" placeholder="ms" value="100">
+            <button class="btn btn-default" type="button" onclick="app.onBlockAndUnblockTimesSerial(event)">B&U - N times serial</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-12">
+        <form class="form-inline">
+          <div class="form-group">
+            <input type="number" class="form-control" id="timesParallel" placeholder="Times" value="10">
+            <input type="number" class="form-control" id="secsParallel" placeholder="ms" value="100">
+            <button class="btn btn-default" type="button" onclick="app.onBlockAndUnblockTimesParallel(event)">B&U - N times parallel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js" ></script>
+  <script src="http://malsup.github.io/jquery.blockUI.js" ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/async/1.4.2/async.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="blockui-manager.js" ></script>
+  <script src="app.js" ></script>
+
+</body>
+</html>
